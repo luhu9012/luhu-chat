@@ -26,24 +26,24 @@ const ExtraList = memo<ExtraListProps>(({ activeTab }) => {
       onClick: configService.exportAll,
       value: 'export',
     },
-    {
-      icon: Feather,
-      label: t('feedback'),
-      onClick: () => window.open(FEEDBACK, '__blank'),
-      value: 'feedback',
-    },
-    {
-      icon: FileClock,
-      label: t('changelog'),
-      onClick: () => window.open(CHANGELOG, '__blank'),
-      value: 'changelog',
-    },
-    {
-      icon: Heart,
-      label: t('about'),
-      onClick: () => window.open(ABOUT, '__blank'),
-      value: 'about',
-    },
+    // {
+    //   icon: Feather,
+    //   label: t('feedback'),
+    //   onClick: () => window.open(FEEDBACK, '__blank'),
+    //   value: 'feedback',
+    // },
+    // {
+    //   icon: FileClock,
+    //   label: t('changelog'),
+    //   onClick: () => window.open(CHANGELOG, '__blank'),
+    //   value: 'changelog',
+    // },
+    // {
+    //   icon: Heart,
+    //   label: t('about'),
+    //   onClick: () => window.open(ABOUT, '__blank'),
+    //   value: 'about',
+    // },
   ];
 
   return (

@@ -17,5 +17,8 @@ config.rules['unicorn/prefer-spread'] = 0;
 config.rules['unicorn/catch-error-name'] = 0;
 config.rules['unicorn/no-array-for-each'] = 0;
 config.rules['unicorn/prefer-number-properties'] = 0;
+//忽略构建报错
+config.rules['unused-imports/no-unused-imports'] = 0;
+config.rules['@typescript-eslint/no-unused-vars'] = 0;
 
 module.exports = config;

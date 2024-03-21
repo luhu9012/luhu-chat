@@ -7,7 +7,7 @@ type AddManifestDispatch = { id: string; plugin: LobeChatPluginManifest; type: '
 type DeleteManifestDispatch = { id: string; type: 'deleteManifest' };
 // type UpdateManifestDispatch = {
 //   id: string;
-//   plugin: LobeChatPlugin;
+//   plugin: LuhuChatPlugin;
 //   type: 'updateManifest';
 //   version: string;
 // };
