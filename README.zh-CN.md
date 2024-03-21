@@ -86,7 +86,7 @@
 我们是一群充满热情的设计工程师，希望为 AIGC 提供现代化的设计组件和工具，并以开源的方式分享。
 同时通过 Bootstrapping 的方式，我们希望能够为开发者和用户提供一个更加开放、更加透明友好的产品生态。
 
-不论普通用户与专业开发者 LobeHub 旨在成为所有人的 AI Agent 实验场，LuhuChat 目前正在积极开发中，有需求或者问题，欢迎提交 [issues][issues-link]
+不论普通用户与专业开发者，LobeHub 旨在成为所有人的 AI Agent 实验场。LobeChat 目前正在积极开发中，有任何需求或者问题，欢迎提交 [issues][issues-link]
 
 | [![][vercel-shield-badge]][vercel-link]   | 无需安装或注册！访问我们的网站，快速体验                                     |
 | :---------------------------------------- | :--------------------------------------------------------------------------- |
@@ -167,7 +167,7 @@ LuhuChat 已经支持 OpenAI 最新的 [`gpt-4-vision`](https://platform.openai.
 
 ### `4` [TTS & STT 语音会话][docs-feat-tts]
 
-LuhuChat 支持文字转语音（Text-to-Speech，TTS）和语音转文字（Speech-to-Text，STT）技术，我们的应用能够将文本信息转化为清晰的语音输出，用户可以像与真人交谈一样与我们的对话代理进行交流。
+LobeChat 支持文字转语音（Text-to-Speech，TTS）和语音转文字（Speech-to-Text，STT）技术，这使得我们的应用能够将文本信息转化为清晰的语音输出，用户可以像与真人交谈一样与我们的对话助手进行交流。
 用户可以从多种声音中选择，给助手搭配合适的音源。 同时，对于那些倾向于听觉学习或者想要在忙碌中获取信息的用户来说，TTS 提供了一个极佳的解决方案。
 
 在 LuhuChat 中，我们精心挑选了一系列高品质的声音选项 (OpenAI Audio, Microsoft Edge Speech)，以满足不同地域和文化背景用户的需求。用户可以根据个人喜好或者特定场景来选择合适的语音，从而获得个性化的交流体验。
@@ -182,9 +182,9 @@ LuhuChat 支持文字转语音（Text-to-Speech，TTS）和语音转文字（Spe
 
 ### `5` [Text to Image 文生图][docs-feat-t2i]
 
-支持最新的文本到图片生成技术，LuhuChat 现在能够让用户在与助手对话中直接调用文成图工具进行创作。
+支持最新的文本到图片生成技术，LobeChat 现在能够让用户在与助手对话中直接调用文生图工具进行创作。
 通过利用 [`DALL-E 3`](https://openai.com/dall-e-3)、[`MidJourney`](https://www.midjourney.com/) 和 [`Pollinations`](https://pollinations.ai/) 等 AI 工具的能力， 助手们现在可以将你的想法转化为图像。
-同时可以更私密和沉浸式的完成你的创造过程。
+同时可以更私密和沉浸式地完成你的创作过程。
 
 <div align="right">
 
@@ -202,20 +202,20 @@ LuhuChat 的插件生态系统是其核心功能的重要扩展，它极大地�
 
 通过利用插件，ChatGPT 能够实现实时信息的获取和处理，例如自动获取最新新闻头条，为用户提供即时且相关的资讯。
 
-此外，这些插件不仅局限于新闻聚合，还可以扩展到其他实用的功能，如快速检索文档、获取电商平台数据、以及其他各式各样的第三方服务。
+此外，这些插件不仅局限于新闻聚合，还可以扩展到其他实用的功能，如快速检索文档、生成图象、获取电商平台数据，以及其他各式各样的第三方服务。
 
 > 通过文档了解更多 [📘 插件使用][docs-usage-plugin]
 
 <!-- PLUGIN LIST -->
 
-| 最近新增                                                                                                          | 插件描述                                                                                                                                      |
-| ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| [图表和图示](https://chat-preview.lobehub.com/settings/agent)<br/><sup>By **pyxl** on **2024-02-05**</sup>        | 美人鱼图表，演示文稿方案，分析，研究网站，饼图。<br/>`图表` `图示`                                                                            |
-| [社交搜索](https://chat-preview.lobehub.com/settings/agent)<br/><sup>By **say-apps** on **2024-02-02**</sup>      | 社交搜索提供访问推文、用户、关注者、图片、媒体等功能。<br/>`社交` `推特` `x` `搜索`                                                           |
-| [TokenInsights](https://chat-preview.lobehub.com/settings/agent)<br/><sup>By **feednews** on **2024-01-27**</sup> | 获取实时加密货币价格，BTC，ETH，BNB 和最新见解。最新的币新闻和空投机会。<br/>`加密货币` `btc` `eth` `bnb`                                     |
-| [哔哩哔哩](https://chat-preview.lobehub.com/settings/agent)<br/><sup>By **LobeHub** on **2024-01-27**</sup>       | 通过关键词视频搜索、回放访问、互动弹幕、热门视频推荐和热搜洞察等功能，深入体验哔哩哔哩丰富的内容，尽在您的指尖。<br/>`视频` `哔哩哔哩` `搜索` |
+| 最近新增                                                                                                          | 插件描述                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| [日历助手](https://chat-preview.lobehub.com/settings/agent)<br/><sup>By **cc** on **2024-03-13**</sup>            | 一个用于管理日历事件的插件 # 将自动生成工作流程中的 i18n<br/>`日历` `日程安排` `将自动生成工作流程中的-i-18-n` |
+| [图表和图示](https://chat-preview.lobehub.com/settings/agent)<br/><sup>By **pyxl** on **2024-02-05**</sup>        | 美人鱼图表，演示文稿方案，分析，研究网站，饼图。<br/>`图表` `图示`                                             |
+| [社交搜索](https://chat-preview.lobehub.com/settings/agent)<br/><sup>By **say-apps** on **2024-02-02**</sup>      | 社交搜索提供访问推文、用户、关注者、图片、媒体等功能。<br/>`社交` `推特` `x` `搜索`                            |
+| [TokenInsights](https://chat-preview.lobehub.com/settings/agent)<br/><sup>By **feednews** on **2024-01-27**</sup> | 获取实时加密货币价格，BTC，ETH，BNB 和最新见解。最新的币新闻和空投机会。<br/>`加密货币` `btc` `eth` `bnb`      |
 
-> 📊 Total plugins: [<kbd>**61**</kbd>](https://github.com/lobehub/lobe-chat-plugins)
+> 📊 Total plugins: [<kbd>**59**</kbd>](https://github.com/lobehub/lobe-chat-plugins)
 
  <!-- PLUGIN LIST -->
 
@@ -243,14 +243,14 @@ LuhuChat 的插件生态系统是其核心功能的重要扩展，它极大地�
 
 <!-- AGENT LIST -->
 
-| 最近新增                                                                                                                                                                           | 助手说明                                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [您自己的 domene.no 专家](https://chat-preview.lobehub.com/market?agent=domene-no-helpout)<br/><sup>By **[Ballongknute](https://github.com/Ballongknute)** on **2024-02-27**</sup> | 专注于私人域名操作，定制 domene.no 界面，流量获取，用户留存，转化和内容规划。熟悉营销理论和相关经典著作。<br/>`私人域名操作` `流量获取` `用户留存` `转化` `内容规划` `设计` |
-| [足球 - 熟悉的 AI 伴侣](https://chat-preview.lobehub.com/market?agent=soccer)<br/><sup>By **[MYSeaIT](https://github.com/MYSeaIT)** on **2024-02-27**</sup>                        | 专注于足球讨论，提供实时更新、球员见解和历史知识。<br/>`足球` `比赛` `统计` `战术` `策略`                                                                                   |
-| [Prisma 数据生成专家](https://chat-preview.lobehub.com/market?agent=prisma)<br/><sup>By **[Justin3go](https://github.com/Justin3go)** on **2024-02-26**</sup>                      | 擅长数据库架构、Node.js 编程和 Prisma 技术栈，能提供业务知识梳理、数据库优化建议和 mock 数据生成。<br/>`数据库专家` `node-js专家` `prisma技术栈` `业务知识` `数据库架构`    |
-| [GitHub Finder](https://chat-preview.lobehub.com/market?agent=github-finder)<br/><sup>By **[nullmastermind](https://github.com/nullmastermind)** on **2024-02-25**</sup>           | 专门根据自定义公式在 GitHub 上建议开源存储库。<br/>`编码` `开源` `github` `算法` `排序`                                                                                     |
+| 最近新增                                                                                                                                                                            | 助手说明                                                                                                                                                                                                                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [亚马逊卖家支持代理](https://chat-preview.lobehub.com/market?agent=amazon-seller-support-agent)<br/><sup>By **[etnperlong](https://github.com/etnperlong)** on **2024-03-15**</sup> | AI 助手，协助亚马逊卖家回复客户服务回复，提供详细和有力的回复，以达到令人满意的解决方案。<br/>`亚马逊` `卖家` `写作`                                                                                                                                                                                                             |
+| [TikTok 脚本撰写器](https://chat-preview.lobehub.com/market?agent=tiktok-script-writer)<br/><sup>By **[sdhjn19dj1m](https://github.com/sdhjn19dj1m)** on **2024-03-12**</sup>       | 此脚本专为 TikTok 的短视频格式量身定制，旨在吸引和娱乐特定目标受众。它融入了流行元素和内容病毒传播的最佳实践，确保视频从一开始就吸引注意力。脚本结构包括引人入胜的开场、简洁而有影响力的主体信息和引人注目的行动号召，同时反映用户期望的语气和主题。<br/>`tik-tok` `short-video` `viral-content` `trending-hashtag` `engagement` |
+| [Gen Z Engagement Specialist](https://chat-preview.lobehub.com/market?agent=gen-z)<br/><sup>By **[MYSeaIT](https://github.com/MYSeaIT)** on **2024-03-09**</sup>                    | 专注于通过定制互动反映他们的偏好和价值观，与 Gen Z 用户进行互动。<br/>`engagement` `gen-z` `communication` `advice` `interaction`                                                                                                                                                                                                |
+| [日程管理助手](https://chat-preview.lobehub.com/market?agent=calendar-manager)<br/><sup>By **[ccdanpian](https://github.com/ccdanpian)** on **2024-03-07**</sup>                    | 日程管理助手，调用时间插件，处理新增、查询、删除日程请求，支持多种操作和提醒。<br/>`日程管理` `时间插件` `新增日程` `查询日程` `删除日程`                                                                                                                                                                                        |
 
-> 📊 Total agents: [<kbd>**187**</kbd> ](https://github.com/lobehub/lobe-chat-agents)
+> 📊 Total agents: [<kbd>**202**</kbd> ](https://github.com/lobehub/lobe-chat-agents)
 
  <!-- AGENT LIST -->
 
@@ -264,8 +264,8 @@ LuhuChat 的插件生态系统是其核心功能的重要扩展，它极大地�
 
 ### `8` [渐进式 Web 应用 (PWA)][docs-feat-pwa]
 
-我们利深知在当今多设备环境下为用户提供无缝体验的重要性。为此，我们采用了渐进式 Web 应用 [PWA](https://support.google.com/chrome/answer/9658361) 技术，
-这是一种能够将网页应用提升至接近原生应用体验的现代 Web 技术。通过 PWA，LuhuChat 能够在桌面和移动设备上提供高度优化的用户体验，同时保持轻量级和高性能的特点。
+我们深知在当今多设备环境下为用户提供无缝体验的重要性。为此，我们采用了渐进式 Web 应用 [PWA](https://support.google.com/chrome/answer/9658361) 技术，
+这是一种能够将网页应用提升至接近原生应用体验的现代 Web 技术。通过 PWA，LobeChat 能够在桌面和移动设备上提供高度优化的用户体验，同时保持轻量级和高性能的特点。
 在视觉和感觉上，我们也经过精心设计，以确保它的界面与原生应用无差别，提供流畅的动画、响应式布局和适配不同设备的屏幕分辨率。
 
 > \[!NOTE]
@@ -299,8 +299,8 @@ LuhuChat 的插件生态系统是其核心功能的重要扩展，它极大地�
 
 ### `10` [自定义主题][docs-feat-theme]
 
-作为设计工程师出身 LuhuChat 在界面设计上十分考虑用户的个性化体验，因此引入了灵活多变的主题模式，其中包括日间的亮色模式和夜间的深色模式。
-除了主题模式的切换，还提供了一系列的颜色定制选项，允许用户根据自己的喜好来调整应用的主题色彩。无论是想要沉稳的深蓝，还是希望活泼的桃粉，或者是专业的灰白，用户都能够在 LuhuChat 中找到匹配自己风格的颜色选择。
+作为设计工程师出身，LobeChat 在界面设计上充分考虑用户的个性化体验，因此引入了灵活多变的主题模式，其中包括日间的亮色模式和夜间的深色模式。
+除了主题模式的切换，还提供了一系列的颜色定制选项，允许用户根据自己的喜好来调整应用的主题色彩。无论是想要沉稳的深蓝，还是希望活泼的桃粉，或者是专业的灰白，用户都能够在 LobeChat 中找到匹配自己风格的颜色选择。
 
 > \[!TIP]
 >
@@ -314,7 +314,7 @@ LuhuChat 的插件生态系统是其核心功能的重要扩展，它极大地�
 
 ### 更多特性
 
-除了上述功能特性以外，我们的所具有的设计和技术能力将为你带来了更多使用保障：
+除了上述功能特性以外，LobeChat 所具有的设计和技术能力将为你带来更多使用保障：
 
 - [x] 💎 **精致 UI 设计**：经过精心设计的界面，具有优雅的外观和流畅的交互效果，支持亮暗色主题，适配移动端。支持 PWA，提供更加接近原生应用的体验。
 - [x] 🗣️ **流畅的对话体验**：流式响应带来流畅的对话体验，并且支持完整的 Markdown 渲染，包括代码高亮、LaTex 公式、Mermaid 流程图等。
@@ -377,6 +377,10 @@ LuhuChat 提供了 Vercel 的 自托管版本 和 [Docker 镜像][docker-release
 | [![][deploy-button-image]][deploy-link] | [![][deploy-on-zeabur-button-image]][deploy-on-zeabur-link] | [![][deploy-on-sealos-button-image]][deploy-on-sealos-link] |
 
 </div>
+
+#### Fork 之后
+
+在 Fork 后，请只保留 "upstream sync" Action 并在你 fork 的 GitHub Repo 中禁用其他 Action。
 
 #### 保持更新
 
@@ -464,8 +468,7 @@ API Key 是使用 LuhuChat 进行大语言模型会话的必要信息，本节�
 
 #### `B` 通过 OpenAI 第三方代理商
 
-如果你发现注册 OpenAI 账户或者绑定外币信用卡比较麻烦，可以考虑借助一些知名的 OpenAI 第三方代理商来获取 API Key，
-这可以有效降低获取 OpenAI API Key 的门槛。但与此同时，一旦使用三方服务，你可能也需要承担潜在的风险，
+如果你发现注册 OpenAI 账户或者绑定外币信用卡比较麻烦，可以考虑借助一些知名的 OpenAI 第三方代理商来获取 API Key，这可以有效降低获取 OpenAI API Key 的门槛。但与此同时，一旦使用三方服务，你可能也需要承担潜在的风险，
 请根据你自己的实际情况自行决策。以下是常见的第三方模型代理商列表，供你参考：
 
 |                                                                                                                                                   | 服务商       | 特性说明                                                       | Proxy 代理地址            | 链接                            |

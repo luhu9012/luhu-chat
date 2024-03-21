@@ -1,7 +1,6 @@
-import { Callout, Steps } from 'nextra/components';
-
 # 身份验证服务
 
+<<<<<<< HEAD
 LuhuChat 支持配置外部身份验证服务，供企业 / 组织内部使用，统一管理用户授权，目前支持 [Auth0][auth0-client-page]，本文将介绍如何配置身份验证服务。
 
 ## 配置身份验证服务
@@ -27,11 +26,16 @@ LuhuChat 支持配置外部身份验证服务，供企业 / 组织内部使用�
 ```bash
 http(s)://your-domain/api/auth/callback/auth0
 ```
+=======
+LobeChat 支持配置外部身份验证服务，供企业 / 组织内部使用，统一管理用户授权。
+>>>>>>> 0b1d4cdbdee0241b3965a4c86ef4bcddb0c3fbd9
 
-![](https://github.com/CloudPassenger/lobe-chat/assets/30863298/575f46aa-f485-49bd-8b90-dbb1ce1a5c1b)
+目前支持的身份验证服务有：
 
-{' '}
+- [Auth0](/zh/self-hosting/advanced/sso-providers/auth0)
+- [Microsoft Entra ID](/zh/self-hosting/advanced/sso-providers/microsoft-entra-id)
 
+<<<<<<< HEAD
 <Callout type={'info'}>
   可以在部署后再填写或修改 Allowed Callback URLs，但是务必保证填写的 URL 与部署的 URL 一致
 </Callout>
@@ -61,23 +65,24 @@ http(s)://your-domain/api/auth/callback/auth0
 </Steps>
 
 <Callout>部署成功后，用户将可以使用 Auth0 中配置的用户通过身份认证并使用 LuhuChat。</Callout>
+=======
+点击链接可以查看对应平台的配置文档。
+>>>>>>> 0b1d4cdbdee0241b3965a4c86ef4bcddb0c3fbd9
 
 ## 进阶配置
 
-### 连接现有的单点登录服务
+同时启用多个身份验证源请设置 `SSO_PROVIDERS` 环境变量，以逗号 `,` 分割，例如 `auth0,azure-ad`。
 
-如果你的企业或组织已有现有的统一身份认证设施，可在 Applications -> SSO Integrations 中，连接现有的单点登录服务。
+顺序为 SSO 提供商的显示顺序。
 
-Auth0 支持 Azure Active Directory / Slack / Google Workspace / Office 365 / Zoom 等单点登录服务，详细支持列表可参考 [这里][auth0-sso-integrations]
+| SSO 提供商            | 值          |
+| ------------------ | ---------- |
+| Auth0              | `auth0`    |
+| Microsoft Entra ID | `azure-ad` |
 
-![](https://github.com/CloudPassenger/lobe-chat/assets/30863298/32650f4f-d0b0-4843-b26d-d35bad11d8a3)
+## 其他 SSO 提供商
 
-### 配置社交登录
-
-如果你的企业或组织需要支持外部人员登录，可以在 Authentication -> Social 中，配置社交登录服务。
-
-![](https://github.com/CloudPassenger/lobe-chat/assets/30863298/7b6f6a6c-2686-49d8-9dbd-0516053f1efa)
-
+<<<<<<< HEAD
 <Callout type={'warning'}>
   配置社交登录服务默认会允许所有人通过认证，这可能会导致 LuhuChat 被外部人员滥用。
 </Callout>
@@ -85,7 +90,8 @@ Auth0 支持 Azure Active Directory / Slack / Google Workspace / Office 365 / Zo
   如果你需要限制登录人员，务必配置 **阻止策略**： 请在打开社交登录选项后，参考
   [这篇文章][auth0-login-actions-manual] 创建 Action 来设置阻止 / 允许列表。
 </Callout>
+=======
+请参考 [NextAuth.js][next-auth-js] 文档，欢迎提交 Pull Request。
+>>>>>>> 0b1d4cdbdee0241b3965a4c86ef4bcddb0c3fbd9
 
-[auth0-client-page]: https://manage.auth0.com/dashboard
-[auth0-login-actions-manual]: https://auth0.com/blog/permit-or-deny-login-requests-using-auth0-actions/
-[auth0-sso-integrations]: https://marketplace.auth0.com/features/sso-integrations
+[next-auth-js]: https://next-auth.js.org/providers

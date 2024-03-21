@@ -1,4 +1,4 @@
-import { Callout, Steps } from 'nextra/components';
+# Upstream Sync
 
 ## `A` Vercel / Zeabur Deployment
 
@@ -16,51 +16,74 @@ If you deployed your project according to the one-click deployment steps in the 
 
 After forking the project, due to Github's limitations, you need to manually enable Workflows on the Actions page of your forked project and start the Upstream Sync Action. Once enabled, you can set up automatic updates to occur every hour.
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/17870709/266985117-4d48fe7b-0412-4667-8129-b25ebcf2c9de.png) ![](https://github-production-user-asset-6210df.s3.amazonaws.com/17870709/266985177-7677b4ce-c348-4145-9f60-829d448d5be6.png)
+<Image alt="Enable Automatic Updates S1" src="https://github-production-user-asset-6210df.s3.amazonaws.com/17870709/266985117-4d48fe7b-0412-4667-8129-b25ebcf2c9de.png" />
+
+<Image alt="Enable Automatic Updates S2" src="https://github-production-user-asset-6210df.s3.amazonaws.com/17870709/266985177-7677b4ce-c348-4145-9f60-829d448d5be6.png" />
 
 ## `B` Docker Deployment
 
 Upgrading the Docker deployment version is very simple, you just need to redeploy the latest LuhuChat image. Here are the commands required to perform these steps:
 
 <Steps>
+<<<<<<< HEAD
 ### Stop and Remove the Current Running LuhuChat Container
 
 Assuming the LuhuChat container is named `lobe-chat`, use the following commands to stop and remove the currently running LuhuChat container:
+=======
+  ### Stop and Remove the Current Running LobeChat Container
+>>>>>>> 0b1d4cdbdee0241b3965a4c86ef4bcddb0c3fbd9
 
-```fish
-docker stop lobe-chat
-docker rm lobe-chat
-```
+  Assuming the LobeChat container is named `lobe-chat`, use the following commands to stop and remove the currently running LobeChat container:
 
+<<<<<<< HEAD
 ### Pull the Latest LuhuChat Image
 
 Use the following command to pull the latest Docker image for LuhuChat:
+=======
+  ```fish
+  docker stop lobe-chat
+  docker rm lobe-chat
+  ```
 
-```fish
-docker pull lobehub/lobe-chat
-```
+  ### Pull the Latest LobeChat Image
+>>>>>>> 0b1d4cdbdee0241b3965a4c86ef4bcddb0c3fbd9
 
-### Restart the Docker Container
+  Use the following command to pull the latest Docker image for LobeChat:
 
+  ```fish
+  docker pull lobehub/lobe-chat
+  ```
+
+<<<<<<< HEAD
 Redeploy the LuhuChat container using the newly pulled image:
+=======
+  ### Restart the Docker Container
+>>>>>>> 0b1d4cdbdee0241b3965a4c86ef4bcddb0c3fbd9
 
-```fish
-docker run -d -p 3210:3210 \
-  -e OPENAI_API_KEY=sk-xxxx \
-  -e OPENAI_PROXY_URL=https://api-proxy.com/v1 \
-  -e ACCESS_CODE=lobe66 \
-  --name lobe-chat \
-  lobehub/lobe-chat
-```
+  Redeploy the LobeChat container using the newly pulled image:
 
+  ```fish
+  docker run -d -p 3210:3210 \
+    -e OPENAI_API_KEY=sk-xxxx \
+    -e OPENAI_PROXY_URL=https://api-proxy.com/v1 \
+    -e ACCESS_CODE=lobe66 \
+    --name lobe-chat \
+    lobehub/lobe-chat
+  ```
 </Steps>
 
 Ensure that you have sufficient permissions to stop and remove the container before executing these commands, and that Docker has sufficient permissions to pull the new image.
 
+<<<<<<< HEAD
 <Callout type={'info'}>
 
 **If I redeploy, will I lose my local chat records?**
 
 No need to worry, you won't. All of LuhuChat's chat records are stored in your local browser. Therefore, when redeploying LuhuChat using Docker, your chat records will not be lost.
+=======
+<Callout type={'tip'}>
+  **If I redeploy, will I lose my local chat records?**
+>>>>>>> 0b1d4cdbdee0241b3965a4c86ef4bcddb0c3fbd9
 
+  No need to worry, you won't. All of LobeChat's chat records are stored in your local browser. Therefore, when redeploying LobeChat using Docker, your chat records will not be lost.
 </Callout>

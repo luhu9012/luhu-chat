@@ -1,10 +1,10 @@
 import { Upload } from 'antd';
 import { useResponsive } from 'antd-style';
-import { Feather, FileClock, HardDriveDownload, HardDriveUpload, Heart } from 'lucide-react';
+import { Feather, FileClock, HardDriveDownload, HardDriveUpload } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { ABOUT, CHANGELOG, FEEDBACK } from '@/const/url';
+import { CHANGELOG, FEEDBACK } from '@/const/url';
 import { useImportConfig } from '@/hooks/useImportConfig';
 import { configService } from '@/services/config';
 import { SettingsTabs } from '@/store/global/initialState';

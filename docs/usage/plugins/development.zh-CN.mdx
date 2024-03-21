@@ -14,56 +14,66 @@
 
 本节将会介绍如何在 LuhuChat 中添加和使用一个自定义插件。
 
-### **`1`** 创建并启动插件项目
+<Steps>
+  ### 创建并启动插件项目
 
-你需要先在本地创建一个插件项目，可以使用我们准备好的模板 [lobe-chat-plugin-template][lobe-chat-plugin-template-url]
+  你需要先在本地创建一个插件项目，可以使用我们准备好的模板 [lobe-chat-plugin-template][lobe-chat-plugin-template-url]
 
-```bash
-$ git clone https://github.com/lobehub/chat-plugin-template.git
-$ cd chat-plugin-template
-$ npm i
-$ npm run dev
-```
+  ```bash
+  $ git clone https://github.com/lobehub/chat-plugin-template.git
+  $ cd chat-plugin-template
+  $ npm i
+  $ npm run dev
+  ```
 
-当出现`ready started server on 0.0.0.0:3400, url: http://localhost:3400` 时，说明插件服务已经在本地启动成功。
+  当出现`ready started server on 0.0.0.0:3400, url: http://localhost:3400` 时，说明插件服务已经在本地启动成功。
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259526-9ef25272-4312-429b-93bc-a95515727ed3.png)
-
+<<<<<<< HEAD:docs/usage/plugins/plugin-development.zh-CN.mdx
 ### **`2`** 在 LuhuChat 角色设置中添加本地插件
 
 接下来进入到 LuhuChat 中，创建一个新的助手，并进入它的会话设置页：
+=======
+  <Image alt="创建并启动插件项目" height={483} inStep src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259526-9ef25272-4312-429b-93bc-a95515727ed3.png" />
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259643-1a9cc34a-76f3-4ccf-928b-129654670efd.png)
+  ### 在 LobeChat 角色设置中添加本地插件
+>>>>>>> 0b1d4cdbdee0241b3965a4c86ef4bcddb0c3fbd9:docs/usage/plugins/development.zh-CN.mdx
 
-点击插件列表右侧的 <kbd>添加</kbd> 按钮，打开自定义插件添加弹窗：
+  接下来进入到 LobeChat 中，创建一个新的助手，并进入它的会话设置页：
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259748-2ef6a244-39bb-483c-b359-f156ffcbe1a4.png)
+  <Image alt="在 LobeChat 角色设置中添加本地插件 S1" height={483} inStep src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259643-1a9cc34a-76f3-4ccf-928b-129654670efd.png" />
 
-在 **插件描述文件 Url** 地址 中填入 `http://localhost:3400/manifest-dev.json` ，这是我们本地启动的插件描述清单地址。
+  点击插件列表右侧的 <kbd>添加</kbd> 按钮，打开自定义插件添加弹窗：
 
-此时，你应该可以看到看到插件的标识符一栏已经被自动识别为 `chat-plugin-template`。接下来你需要填写剩下的表单字段（只有标题必填），然后点击 <kbd>保存</kbd> 按钮，即可完成自定义插件添加。
+  <Image alt="在 LobeChat 角色设置中添加本地插件 S2" height={483} inStep src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259748-2ef6a244-39bb-483c-b359-f156ffcbe1a4.png" />
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259964-59f4906d-ae2e-4ec0-8b43-db36871d0869.png)
+  在 **插件描述文件 Url** 地址 中填入 `http://localhost:3400/manifest-dev.json` ，这是我们本地启动的插件描述清单地址。
 
-完成添加后，在插件列表中就能看到刚刚添加的插件，如果需要修改插件的配置，可以点击最右侧的 <kbd>设置</kbd> 按钮进行修改。
+  此时，你应该可以看到看到插件的标识符一栏已经被自动识别为 `chat-plugin-template`。接下来你需要填写剩下的表单字段（只有标题必填），然后点击 <kbd>保存</kbd> 按钮，即可完成自定义插件添加。
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265260093-a0363c74-0b5b-48dd-b103-2db6b4a8262e.png)
+  <Image alt="在 LobeChat 角色设置中添加本地插件 S3" height={483} inStep src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259964-59f4906d-ae2e-4ec0-8b43-db36871d0869.png" />
 
-### **`3`** 会话测试插件功能
+  完成添加后，在插件列表中就能看到刚刚添加的插件，如果需要修改插件的配置，可以点击最右侧的 <kbd>设置</kbd> 按钮进行修改。
 
-接来下我们需要测试这个插件的功能是否正常。
+  <Image alt="在 LobeChat 角色设置中添加本地插件 S4" height={483} inStep src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265260093-a0363c74-0b5b-48dd-b103-2db6b4a8262e.png" />
 
-点击 <kbd>返回</kbd> 按钮回到会话区，然后向助手发送消息：「我应该穿什么？ 」此时助手将会尝试向你询问，了解你的性别与当前的心情。
+  ### 会话测试插件功能
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265260291-f0aa0e7c-0ffb-486c-a834-08e73d49896f.png)
+  接来下我们需要测试这个插件的功能是否正常。
 
-当回答完毕后，助手将会发起插件的调用，根据你的性别、心情，从服务端获取推荐的衣服数据，并推送给你。最后基于这些信息做一轮文本总结。
+  点击 <kbd>返回</kbd> 按钮回到会话区，然后向助手发送消息：「我应该穿什么？ 」此时助手将会尝试向你询问，了解你的性别与当前的心情。
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265260461-c22ae797-2809-464b-96fc-d0c020f4807b.png)
+  <Image alt="会话测试插件功能 S1" height={483} inStep src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265260291-f0aa0e7c-0ffb-486c-a834-08e73d49896f.png" />
 
+  当回答完毕后，助手将会发起插件的调用，根据你的性别、心情，从服务端获取推荐的衣服数据，并推送给你。最后基于这些信息做一轮文本总结。
+
+<<<<<<< HEAD:docs/usage/plugins/plugin-development.zh-CN.mdx
 当完成这些操作后，你已经了解了添加自定义插件，并在 LuhuChat 中使用的基础流程。
+=======
+  <Image alt="会话测试插件功能 S2" height={483} inStep src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265260461-c22ae797-2809-464b-96fc-d0c020f4807b.png" />
+>>>>>>> 0b1d4cdbdee0241b3965a4c86ef4bcddb0c3fbd9:docs/usage/plugins/development.zh-CN.mdx
 
-<br />
+  当完成这些操作后，你已经了解了添加自定义插件，并在 LobeChat 中使用的基础流程。
+</Steps>
 
 ## 本地插件开发
 
@@ -174,7 +184,11 @@ export default async (req: Request) => {
 
 由于 LuhuChat 默认的插件网关是云端服务 `/api/plugins`，云端服务通过 manifest 上的 `api.url` 地址发送请求，以解决跨域问题。
 
+<<<<<<< HEAD:docs/usage/plugins/plugin-development.zh-CN.mdx
 针对自定义插件，插件请求需要发送给本地服务， 因此通过在 manifest 中指定网关 (http://localhost:3400/api/gateway)，LuhuChat 将会直接请求该地址，然后只需要在该地址下创建对应的网关即可。
+=======
+针对自定义插件，插件请求需要发送给本地服务， 因此通过在 manifest 中指定网关 ([http://localhost:3400/api/gateway)，LobeChat](http://localhost:3400/api/gateway\)，LobeChat) 将会直接请求该地址，然后只需要在该地址下创建对应的网关即可。
+>>>>>>> 0b1d4cdbdee0241b3965a4c86ef4bcddb0c3fbd9:docs/usage/plugins/development.zh-CN.mdx
 
 ```ts
 import { createLuhuChatPluginGateway } from '@lobehub/chat-plugins-gateway';
@@ -192,17 +206,17 @@ export default createLuhuChatPluginGateway();
 
 自定义插件的 UI 界面是一个可选项。例如 官方插件 [「🧩 / 🕸 网页内容提取」](https://github.com/lobehub/chat-plugin-web-crawler)，没有实现相应的用户界面。
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263241-0e765fdc-3463-4c36-a398-aef177a30df9.png)
+<Image alt="插件 UI 界面 S1" height={483} src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263241-0e765fdc-3463-4c36-a398-aef177a30df9.png" />
 
 如果你希望在插件消息中展示更加丰富的信息，或者包含一些富交互操作，你可以为插件定制一个用户界面。例如下图则为[「搜索引擎」](https://github.com/lobehub/chat-plugin-search-engine)插件的用户界面。
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263427-9bdc03d5-aa61-4f62-a2ce-88683f3308d8.png)
+<Image alt="插件 UI 界面 S2" height={483} src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263427-9bdc03d5-aa61-4f62-a2ce-88683f3308d8.png" />
 
 #### 插件 UI 界面实现
 
 LuhuChat 通过 `iframe` 实现插件 ui 的加载，使用 `postMessage` 实现主体与插件的通信。因此， 插件 UI 的实现方式与普通的网页开发一致，你可以使用任何你熟悉的前端框架与开发语言。
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263653-4ea87abc-249a-49f3-a241-7ed93ddb1ddf.png)
+<Image alt="插件 UI 界面实现" height={483} src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263653-4ea87abc-249a-49f3-a241-7ed93ddb1ddf.png" />
 
 在我们提供的模板中使用了 React + Next.js + [antd](https://ant.design/) 作为前端界面框架，你可以在 [`src/pages/index.tsx`](https://github.com/lobehub/chat-plugin-template/blob/main/src/pages/index.tsx) 中找到用户界面的实现。
 
@@ -240,7 +254,7 @@ export default Render;
 
 ### 插件 Shield
 
-[![lobe-chat-plugin](https://img.shields.io/badge/%F0%9F%A4%AF%20%26%20%F0%9F%A7%A9%20LobeHub-Plugin-95f3d9?labelColor=black&style=flat-square)](https://github.com/lobehub/lobe-chat-plugins)
+[![lobe-chat-plugin](https://img.shields.io/badge/%F0%9F%A4%AF%20%26%20%F0%9F%A7%A9%20LobeHub-Plugin-95f3d9?labelColor=black\&style=flat-square)](https://github.com/lobehub/lobe-chat-plugins)
 
 ```markdown
 [![lobe-chat-plugin](https://img.shields.io/badge/%F0%9F%A4%AF%20%26%20%F0%9F%A7%A9%20LobeHub-Plugin-95f3d9?labelColor=black&style=flat-square)](https://github.com/lobehub/lobe-chat-plugins)
@@ -248,11 +262,11 @@ export default Render;
 
 ## 链接
 
-- **📘 Pluging SDK 文档**: https://chat-plugin-sdk.lobehub.com
-- **🚀 chat-plugin-template**: https://github.com/lobehub/chat-plugin-template
-- **🧩 chat-plugin-sdk**: https://github.com/lobehub/chat-plugin-sdk
-- **🚪 chat-plugin-gateway**: https://github.com/lobehub/chat-plugins-gateway
-- **🏪 lobe-chat-plugins**: https://github.com/lobehub/lobe-chat-plugins
+- **📘 Pluging SDK 文档**: [https://chat-plugin-sdk.lobehub.com](https://chat-plugin-sdk.lobehub.com)
+- **🚀 chat-plugin-template**: [https://github.com/lobehub/chat-plugin-template](https://github.com/lobehub/chat-plugin-template)
+- **🧩 chat-plugin-sdk**: [https://github.com/lobehub/chat-plugin-sdk](https://github.com/lobehub/chat-plugin-sdk)
+- **🚪 chat-plugin-gateway**: [https://github.com/lobehub/chat-plugins-gateway](https://github.com/lobehub/chat-plugins-gateway)
+- **🏪 lobe-chat-plugins**: [https://github.com/lobehub/lobe-chat-plugins](https://github.com/lobehub/lobe-chat-plugins)
 
 [fetch-plugin-message-url]: https://github.com/lobehub/chat-plugin-template
 [lobe-chat-plugin-template-url]: https://github.com/lobehub/chat-plugin-template

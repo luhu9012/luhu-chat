@@ -21,4 +21,20 @@ config.rules['unicorn/prefer-number-properties'] = 0;
 config.rules['unused-imports/no-unused-imports'] = 0;
 config.rules['@typescript-eslint/no-unused-vars'] = 0;
 
+config.overrides = [
+  {
+    extends: ['plugin:mdx/recommended'],
+    files: ['*.mdx'],
+    rules: {
+      '@typescript-eslint/no-unused-vars': 1,
+      'no-undef': 0,
+      'react/jsx-no-undef': 0,
+      'react/no-unescaped-entities': 0,
+    },
+    settings: {
+      'mdx/code-blocks': false,
+    },
+  },
+];
+
 module.exports = config;

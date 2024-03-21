@@ -14,56 +14,66 @@ A LuhuChat plugin consists of the following components:
 
 This section will introduce how to add and use a custom plugin in LuhuChat.
 
-### **`1`** Create and Launch Plugin Project
+<Steps>
+  ### Create and Launch Plugin Project
 
-You need to first create a plugin project locally, you can use the template we have prepared [lobe-chat-plugin-template][lobe-chat-plugin-template-url]
+  You need to first create a plugin project locally, you can use the template we have prepared [lobe-chat-plugin-template][lobe-chat-plugin-template-url]
 
-```bash
-$ git clone https://github.com/lobehub/chat-plugin-template.git
-$ cd chat-plugin-template
-$ npm i
-$ npm run dev
-```
+  ```bash
+  $ git clone https://github.com/lobehub/chat-plugin-template.git
+  $ cd chat-plugin-template
+  $ npm i
+  $ npm run dev
+  ```
 
-When you see `ready started server on 0.0.0.0:3400, url: http://localhost:3400`, it means the plugin service has been successfully launched locally.
+  When you see `ready started server on 0.0.0.0:3400, url: http://localhost:3400`, it means the plugin service has been successfully launched locally.
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259526-9ef25272-4312-429b-93bc-a95515727ed3.png)
-
+<<<<<<< HEAD:docs/usage/plugins/plugin-development.mdx
 ### **`2`** Add Local Plugin in LuhuChat Role Settings
 
 Next, go to LuhuChat, create a new assistant, and go to its session settings page:
+=======
+  <Image alt="Create and Launch Plugin Project" height={483} inStep src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259526-9ef25272-4312-429b-93bc-a95515727ed3.png" />
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259643-1a9cc34a-76f3-4ccf-928b-129654670efd.png)
+  ### Add Local Plugin in LobeChat Role Settings
+>>>>>>> 0b1d4cdbdee0241b3965a4c86ef4bcddb0c3fbd9:docs/usage/plugins/development.mdx
 
-Click the <kbd>Add</kbd> button on the right of the plugin list to open the custom plugin adding popup:
+  Next, go to LobeChat, create a new assistant, and go to its session settings page:
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259748-2ef6a244-39bb-483c-b359-f156ffcbe1a4.png)
+  <Image alt="Add Local Plugin in LobeChat Role Settings S1" height={483} inStep src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259643-1a9cc34a-76f3-4ccf-928b-129654670efd.png" />
 
-Fill in the **Plugin Description File Url** with `http://localhost:3400/manifest-dev.json`, which is the manifest address of the plugin we started locally.
+  Click the <kbd>Add</kbd> button on the right of the plugin list to open the custom plugin adding popup:
 
-At this point, you should see that the identifier of the plugin has been automatically recognized as `chat-plugin-template`. Next, you need to fill in the remaining form fields (only the title is required), and then click the <kbd>Save</kbd> button to complete the custom plugin addition.
+  <Image alt="Add Local Plugin in LobeChat Role Settings S2" height={483} inStep src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259748-2ef6a244-39bb-483c-b359-f156ffcbe1a4.png" />
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259964-59f4906d-ae2e-4ec0-8b43-db36871d0869.png)
+  Fill in the **Plugin Description File Url** with `http://localhost:3400/manifest-dev.json`, which is the manifest address of the plugin we started locally.
 
-After adding, you can see the newly added plugin in the plugin list. If you need to modify the plugin configuration, you can click the <kbd>Settings</kbd> button on the far right to make changes.
+  At this point, you should see that the identifier of the plugin has been automatically recognized as `chat-plugin-template`. Next, you need to fill in the remaining form fields (only the title is required), and then click the <kbd>Save</kbd> button to complete the custom plugin addition.
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265260093-a0363c74-0b5b-48dd-b103-2db6b4a8262e.png)
+  <Image alt="Add Local Plugin in LobeChat Role Settings S3" height={483} inStep src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265259964-59f4906d-ae2e-4ec0-8b43-db36871d0869.png" />
 
-### **`3`** Test Plugin Function in Session
+  After adding, you can see the newly added plugin in the plugin list. If you need to modify the plugin configuration, you can click the <kbd>Settings</kbd> button on the far right to make changes.
 
-Next, we need to test whether the plugin's function is working properly.
+  <Image alt="Add Local Plugin in LobeChat Role Settings S4" height={483} inStep src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265260093-a0363c74-0b5b-48dd-b103-2db6b4a8262e.png" />
 
-Click the <kbd>Back</kbd> button to return to the session area, and then send a message to the assistant: "What should I wear?" At this point, the assistant will try to ask you about your gender and current mood.
+  ### Test Plugin Function in Session
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265260291-f0aa0e7c-0ffb-486c-a834-08e73d49896f.png)
+  Next, we need to test whether the plugin's function is working properly.
 
-After answering, the assistant will initiate the plugin call, retrieve recommended clothing data from the server based on your gender and mood, and push it to you. Finally, it will provide a text summary based on this information.
+  Click the <kbd>Back</kbd> button to return to the session area, and then send a message to the assistant: "What should I wear?" At this point, the assistant will try to ask you about your gender and current mood.
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265260461-c22ae797-2809-464b-96fc-d0c020f4807b.png)
+  <Image alt="Test Plugin Function in Session S1" height={483} inStep src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265260291-f0aa0e7c-0ffb-486c-a834-08e73d49896f.png" />
 
+  After answering, the assistant will initiate the plugin call, retrieve recommended clothing data from the server based on your gender and mood, and push it to you. Finally, it will provide a text summary based on this information.
+
+<<<<<<< HEAD:docs/usage/plugins/plugin-development.mdx
 After completing these operations, you have understood the basic process of adding custom plugins and using them in LuhuChat.
+=======
+  <Image alt="Test Plugin Function in Session S2" height={483} inStep src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265260461-c22ae797-2809-464b-96fc-d0c020f4807b.png" />
+>>>>>>> 0b1d4cdbdee0241b3965a4c86ef4bcddb0c3fbd9:docs/usage/plugins/development.mdx
 
-<br />
+  After completing these operations, you have understood the basic process of adding custom plugins and using them in LobeChat.
+</Steps>
 
 ## Local Plugin Development
 
@@ -174,7 +184,11 @@ Where `manClothes` and `womanClothes` are mock data and can be replaced with dat
 
 Since the default plugin gateway for LuhuChat is a cloud service `/api/plugins`, the cloud service sends requests to the address specified in the manifest's `api.url` to solve cross-origin issues.
 
+<<<<<<< HEAD:docs/usage/plugins/plugin-development.mdx
 For custom plugins, plugin requests need to be sent to the local service. Therefore, by specifying the gateway in the manifest (http://localhost:3400/api/gateway), LuhuChat> will directly request this address, and then only the corresponding gateway needs to be created at that address.
+=======
+For custom plugins, plugin requests need to be sent to the local service. Therefore, by specifying the gateway in the manifest ([http://localhost:3400/api/gateway](http://localhost:3400/api/gateway)), LobeChat> will directly request this address, and then only the corresponding gateway needs to be created at that address.
+>>>>>>> 0b1d4cdbdee0241b3965a4c86ef4bcddb0c3fbd9:docs/usage/plugins/development.mdx
 
 ```ts
 import { createLuhuChatPluginGateway } from '@lobehub/chat-plugins-gateway';
@@ -192,17 +206,17 @@ export default createLuhuChatPluginGateway();
 
 The custom UI interface for plugins is optional. For example, the official plugin [Web Content Extraction](https://github.com/lobehub/chat-plugin-web-crawler) does not have a corresponding user interface.
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263241-0e765fdc-3463-4c36-a398-aef177a30df9.png)
+<Image alt="Plugin UI Interface S1" height={483} src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263241-0e765fdc-3463-4c36-a398-aef177a30df9.png" />
 
 If you want to display richer information in plugin messages or include some interactive operations, you can customize a user interface for the plugin. For example, the following image shows the user interface for the [Search Engine](https://github.com/lobehub/chat-plugin-search-engine) plugin.
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263427-9bdc03d5-aa61-4f62-a2ce-88683f3308d8.png)
+<Image alt="Plugin UI Interface S2" height={483} src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263427-9bdc03d5-aa61-4f62-a2ce-88683f3308d8.png" />
 
 #### Implementation of Plugin UI Interface
 
 LuhuChat implements the loading of plugin UI through `iframe` and uses `postMessage` to communicate with the plugin. Therefore, the implementation of the plugin UI is consistent with regular web development. You can use any frontend framework and development language you are familiar with.
 
-![](https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263653-4ea87abc-249a-49f3-a241-7ed93ddb1ddf.png)
+<Image alt="Implementation of Plugin UI Interface" height={483} src="https://github-production-user-asset-6210df.s3.amazonaws.com/28616219/265263653-4ea87abc-249a-49f3-a241-7ed93ddb1ddf.png" />
 
 In the template we provide, we use React + Next.js + [antd](https://ant.design/) as the frontend interface framework. You can find the implementation of the user interface in [`src/pages/index.tsx`](https://github.com/lobehub/chat-plugin-template/blob/main/src/pages/index.tsx).
 
@@ -240,7 +254,7 @@ If you want more people to use your plugin, feel free to [submit it for listing]
 
 ### Plugin Shield
 
-[![lobe-chat-plugin](https://img.shields.io/badge/%F0%9F%A4%AF%20%26%20%F0%9F%A7%A9%20LobeHub-Plugin-95f3d9?labelColor=black&style=flat-square)](https://github.com/lobehub/lobe-chat-plugins)
+[![lobe-chat-plugin](https://img.shields.io/badge/%F0%9F%A4%AF%20%26%20%F0%9F%A7%A9%20LobeHub-Plugin-95f3d9?labelColor=black\&style=flat-square)](https://github.com/lobehub/lobe-chat-plugins)
 
 ```md
 [![lobe-chat-plugin](https://img.shields.io/badge/%F0%9F%A4%AF%20%26%20%F0%9F%A7%A9%20LobeHub-Plugin-95f3d9?labelColor=black&style=flat-square)](https://github.com/lobehub/lobe-chat-plugins)
@@ -248,11 +262,11 @@ If you want more people to use your plugin, feel free to [submit it for listing]
 
 ## Links
 
-- **📘 Pluging SDK Documentation**: https://chat-plugin-sdk.lobehub.com
-- **🚀 chat-plugin-template**: https://github.com/lobehub/chat-plugin-template
-- **🧩 chat-plugin-sdk**: https://github.com/lobehub/chat-plugin-sdk
-- **🚪 chat-plugin-gateway**: https://github.com/lobehub/chat-plugins-gateway
-- **🏪 lobe-chat-plugins**: https://github.com/lobehub/lobe-chat-plugins
+- **📘 Pluging SDK Documentation**: [https://chat-plugin-sdk.lobehub.com](https://chat-plugin-sdk.lobehub.com)
+- **🚀 chat-plugin-template**: [https://github.com/lobehub/chat-plugin-template](https://github.com/lobehub/chat-plugin-template)
+- **🧩 chat-plugin-sdk**: [https://github.com/lobehub/chat-plugin-sdk](https://github.com/lobehub/chat-plugin-sdk)
+- **🚪 chat-plugin-gateway**: [https://github.com/lobehub/chat-plugins-gateway](https://github.com/lobehub/chat-plugins-gateway)
+- **🏪 lobe-chat-plugins**: [https://github.com/lobehub/lobe-chat-plugins](https://github.com/lobehub/lobe-chat-plugins)
 
 [fetch-plugin-message-url]: https://github.com/lobehub/chat-plugin-template
 [lobe-chat-plugin-template-url]: https://github.com/lobehub/chat-plugin-template
